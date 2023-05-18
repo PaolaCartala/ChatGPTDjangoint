@@ -1,0 +1,21 @@
+[run]
+branch = True
+command_line = manage.py test
+omit =
+    # ignoring django-specific modules and packages
+    */migrations/*
+    */settings.py
+    */__init__.py
+    */apps.py
+    */urls.py
+    manage.py
+    config.py
+    tests/*
+
+[report]
+ignore_errors = True
+precision = 2
+
+[html]
+directory = ./tests/coverage_report
+title = Coverage Report - ChatGPT Integration
