@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Integration</title>
+</head>
+<body>
+    <h1>ChatGPT Integration</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question">
+        <button type="submit">Ask</button>
+    </form>
+    {% if response %}
+        <h2>Answer:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
